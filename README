@@ -1,0 +1,47 @@
+/********************************************************************************
+* Class: TableCellMerger
+* Description: Merges similar cells in given row or column in supplied table.
+* Usage: Supply id of the table you want to merge.
+* xmerge() - Merges similar cells lining in a row (affects all rows).
+* ymerge() - Merges similar cells lining in a column (affects all columns).
+*
+* You may provide options if you want to merge cells in specific rows(columns).
+* There are two types of options: include and exclude.
+*
+* xmerge('include: 1, 2, 3') => Merges similar cells lining in 1,2,3rd rows.
+* xmerge('exclude: 1, 2, 3') => Merges similar cells lining in all rows except cells in 1,2,3rd rows.
+*
+* ymerge('include: 5, 6') => Merges similar cells lining in 1,2,3rd columns.
+* ymerge('exclude: 8, 9') => Merges similar cells lining in all rows except cells in 1,2,3rd columns.
+*
+* merge() => Calls ymerge() then calls xmerge().
+*
+*
+* Example: new TableCellMerger('id_of_table_to_be_merged').merge();
+* new TableCellMerger('id_of_table_to_be_merged').ymerge();
+* new TableCellMerger('id_of_table_to_be_merged').xmerge();
+*
+* new TableCellMerger('id_of_table_to_be_merged').xmerge('include: 1, 2');
+* new TableCellMerger('id_of_table_to_be_merged').ymerge('exclude: 3, 4');
+*
+* new TableCellMerger('id_of_table_to_be_merged').xmerge('include: 1, 2').ymerge('exclude: 3, 4');
+* OR
+* new TableCellMerger('id_of_table_to_be_merged').ymerge('exclude: 3, 4').xmerge('include: 1, 2');
+*
+********************************************************************************
+*
+* Copyright (c) 2009 Battur Sanchin
+*
+*                    {
+*                      :homepage => 'http://battur.blogspot.com',
+*                      :email => 'batturjapan@gmail.com',
+*                      :flickr => 'http://flickr.com/photos/battur'
+*                    }
+*
+* ------------------------------------------------------------------------------
+*
+* License: MIT License
+*
+********************************************************************************
+*/
+
